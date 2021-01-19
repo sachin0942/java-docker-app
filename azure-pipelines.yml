@@ -19,7 +19,14 @@ steps:
     repository: java-app
     command: build
     Dockerfile: ./Dockerfile
-
+- task: Docker@2
+  displayName: Push image
+  inputs:
+    containerRegistry: 172.32.31.157:8083
+    repository: java-app
+    command: push
+    tags: latest
+    
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
