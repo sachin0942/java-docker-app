@@ -20,7 +20,7 @@ steps:
     command: build
     Dockerfile: ./Dockerfile
     
-#- script: |
-  #  echo Push docker image.
-   # docker push 172.32.31.157:8083/java-app
-  #displayName: 'Run a multi-line script'
+- script: |
+    echo Push docker image.
+    docker push 172.32.31.157:8083/java-app
+  displayName: 'Run a multi-line script'
