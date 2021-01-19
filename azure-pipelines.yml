@@ -12,6 +12,13 @@ pool:
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
+  
+  task: Docker@2
+  displayName: Build an image
+  inputs:
+    repository: 172.32.31.157:8083
+    command: build
+    Dockerfile: ./Dockerfile
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
