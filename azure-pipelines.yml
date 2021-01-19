@@ -19,6 +19,7 @@ steps:
     repository: java-app
     command: build
     Dockerfile: ./Dockerfile
+    tags: 19
     
 - script: |
     echo Push docker image.
