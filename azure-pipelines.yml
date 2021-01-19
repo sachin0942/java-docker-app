@@ -19,9 +19,8 @@ steps:
     repository: java-app
     command: build
     Dockerfile: ./Dockerfile
-    tags: 19
     
 - script: |
     echo Push docker image.
-    docker push 172.32.31.157:8083/java-app:'$(Build.BuildNumber)'
+    docker push 172.32.31.157:8083/java-app:20
   displayName: 'Run a multi-line script'
