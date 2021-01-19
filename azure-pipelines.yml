@@ -22,5 +22,5 @@ steps:
     
 - script: |
     echo Push docker image.
-    docker push 172.32.31.157:8083/java-app
+    docker push 172.32.31.157:8083/java-app:16
   displayName: 'Run a multi-line script'
