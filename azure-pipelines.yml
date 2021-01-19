@@ -16,7 +16,7 @@ steps:
 - task: Docker@2
   displayName: Build an image
   inputs:
-    repository: 172.32.31.157:8083
+    repository: java-app
     command: build
     Dockerfile: ./Dockerfile
 
