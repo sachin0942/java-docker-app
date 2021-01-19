@@ -22,5 +22,6 @@ steps:
     
 - script: |
     echo Push docker image.
-    docker push 172.32.31.157:8083/java-app:20
+    docker tag java-app:$(Build.BuildNumber) 172.32.31.157:8083/java-app:$(Build.BuildNumber)
+    docker push 172.32.31.157:8083/java-app:$(Build.BuildNumber)
   displayName: 'Run a multi-line script'
